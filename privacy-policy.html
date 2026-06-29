@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Video Downloader - Video Saver</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy:   #0F1D3B;
+            --blue:   #1E3A8A;
+            --accent: #2563EB;
+            --sky:    #3B82F6;
+            --teal:   #0EA5E9;
+            --green:  #059669;
+            --red:    #DC2626;
+            --amber:  #D97706;
+            --ink:    #1E293B;
+            --body:   #334155;
+            --muted:  #64748B;
+            --border: #CBD5E1;
+            --surface:#F1F5F9;
+            --white:  #FFFFFF;
+            --card-shadow: 0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(30,58,138,.08);
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
+            color: var(--body);
+            background: #EEF2FF;
+            min-height: 100vh;
+        }
+        /* ── Header ─────────────────────────────────── */
+        .site-header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 60%, var(--sky) 100%);
+            color: #fff;
+            padding: 56px 24px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .site-header::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 70% 30%, rgba(59,130,246,.25) 0%, transparent 60%),
+                        radial-gradient(ellipse at 20% 80%, rgba(14,165,233,.18) 0%, transparent 55%);
+            pointer-events: none;
+        }
+        .header-icon {
+            font-size: 52px;
+            display: block;
+            margin-bottom: 16px;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,.25));
+        }
+        .site-header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 400;
+            letter-spacing: -.5px;
+            margin-bottom: 6px;
+        }
+        .site-header .doc-type {
+            font-size: .9rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: .75;
+            margin-bottom: 20px;
+        }
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 16px;
+        }
+        .badge {
+            background: rgba(255,255,255,.15);
+            border: 1px solid rgba(255,255,255,.25);
+            border-radius: 20px;
+            padding: 4px 14px;
+            font-size: .78rem;
+            font-weight: 500;
+            backdrop-filter: blur(4px);
+        }
+        /* ── Layout ─────────────────────────────────── */
+        .page-wrap {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+        /* ── Nav strip ──────────────────────────────── */
+        .toc-strip {
+            background: var(--white);
+            border-radius: 14px;
+            box-shadow: var(--card-shadow);
+            padding: 20px 24px;
+            margin: -28px 0 32px;
+            position: relative;
+            z-index: 2;
+        }
+        .toc-strip p {
+            font-size: .78rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+        .toc-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .toc-links a {
+            font-size: .82rem;
+            color: var(--accent);
+            text-decoration: none;
+            background: var(--surface);
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-weight: 500;
+            transition: background .15s, color .15s;
+        }
+        .toc-links a:hover { background: var(--accent); color: #fff; }
+        /* ── Section Cards ──────────────────────────── */
+        .section {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            padding: 32px;
+            margin-bottom: 24px;
+            scroll-margin-top: 24px;
+        }
+        .section-head {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1.5px solid var(--surface);
+        }
+        .section-icon {
+            width: 42px; height: 42px;
+            border-radius: 11px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        .icon-blue   { background: #DBEAFE; }
+        .icon-green  { background: #D1FAE5; }
+        .icon-red    { background: #FEE2E2; }
+        .icon-amber  { background: #FEF3C7; }
+        .icon-purple { background: #EDE9FE; }
+        .icon-teal   { background: #CFFAFE; }
+        .icon-slate  { background: #F1F5F9; }
+        h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--ink);
+            letter-spacing: -.3px;
+        }
+        .section-num {
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 1px;
+        }
+        p { line-height: 1.75; margin-bottom: 14px; font-size: .97rem; }
+        p:last-child { margin-bottom: 0; }
+        ul, ol { padding-left: 20px; margin-bottom: 14px; }
+        li { line-height: 1.75; font-size: .97rem; margin-bottom: 4px; }
+        strong { font-weight: 600; color: var(--ink); }
+        code {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            background: var(--surface);
+            border-radius: 4px;
+            padding: 1px 6px;
+            font-size: .85em;
+            color: var(--accent);
+            border: 1px solid var(--border);
+        }
+        a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+        /* ── Callout boxes ──────────────────────────── */
+        .callout {
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin: 16px 0;
+            font-size: .93rem;
+            line-height: 1.65;
+        }
+        .callout-blue   { background: #EFF6FF; border-left: 3px solid var(--accent); color: #1E40AF; }
+        .callout-green  { background: #ECFDF5; border-left: 3px solid var(--green);  color: #065F46; }
+        .callout-red    { background: #FFF1F2; border-left: 3px solid var(--red);    color: #9B1C1C; }
+        .callout-amber  { background: #FFFBEB; border-left: 3px solid var(--amber);  color: #92400E; }
+        /* ── Tables ─────────────────────────────────── */
+        .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; border: 1px solid var(--border); }
+        table { width: 100%; border-collapse: collapse; font-size: .9rem; min-width: 520px; }
+        thead tr { background: var(--surface); }
+        th {
+            text-align: left;
+            padding: 11px 14px;
+            font-weight: 600;
+            color: var(--ink);
+            font-size: .82rem;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            border-bottom: 1px solid var(--border);
+        }
+        td { padding: 10px 14px; border-bottom: 1px solid var(--surface); vertical-align: top; line-height: 1.6; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background: #FAFBFF; }
+        .tick { color: var(--green); font-weight: 700; }
+        .cross { color: var(--red); font-weight: 700; }
+        /* ── Pill list ──────────────────────────────── */
+        .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+        .pill {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: .82rem;
+            font-weight: 500;
+            color: var(--ink);
+        }
+        .pill-green { background: #D1FAE5; border-color: #6EE7B7; color: #065F46; }
+        .pill-red   { background: #FEE2E2; border-color: #FCA5A5; color: #991B1B; }
+        .pill-blue  { background: #DBEAFE; border-color: #93C5FD; color: #1D4ED8; }
+        /* ── Divider ────────────────────────────────── */
+        .divider { height: 1px; background: var(--surface); margin: 20px 0; }
+        /* ── Ad section special styling ─────────────── */
+        .ad-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .ad-type-card {
+            background: var(--surface);
+            border-radius: 10px;
+            padding: 14px 16px;
+            border: 1px solid var(--border);
+        }
+        .ad-type-card strong { display: block; margin-bottom: 4px; color: var(--ink); font-size: .9rem; }
+        .ad-type-card span { font-size: .83rem; color: var(--muted); line-height: 1.5; }
+        /* ── Footer ─────────────────────────────────── */
+        .footer {
+            background: var(--navy);
+            color: rgba(255,255,255,.65);
+            text-align: center;
+            padding: 28px 20px;
+            font-size: .85rem;
+            line-height: 1.8;
+        }
+        .footer a { color: rgba(255,255,255,.85); }
+        .footer strong { color: #fff; }
+        @media (max-width: 600px) {
+            .section { padding: 20px 18px; }
+            .site-header { padding: 40px 20px 36px; }
+        }
+    </style>
+</head>
+<body>
+<!-- ── Header ─────────────────────────────────────────────────── -->
+<header class="site-header">
+    <span class="header-icon">📥</span>
+    <h1>Video Downloader - Video Saver</h1>
+    <div class="doc-type">Privacy Policy</div>
+    <div class="badge-row">
+        <span class="badge">📅 Last Updated: June 29, 2026</span>
+        <span class="badge">📋 Effective: June 29, 2026</span>
+        <span class="badge">📦 Package: com.jaystudio.all.video.downloader</span>
+        <span class="badge">🌐 GDPR-Aware</span>
+        <span class="badge">✅ Google Play Compliant</span>
+        <span class="badge">📱 AdMob Compliant</span>
+    </div>
+</header>
+<div class="page-wrap">
+    <!-- ── TOC ──────────────────────────────────────────────────── -->
+    <div class="toc-strip">
+        <p>Quick Navigation</p>
+        <div class="toc-links">
+            <a href="#intro">Introduction</a>
+            <a href="#collect">Data We Collect</a>
+            <a href="#access">Network &amp; Storage Access</a>
+            <a href="#processing">Video Downloader Engine</a>
+            <a href="#ads">Advertising (AdMob)</a>
+            <a href="#analytics">Analytics</a>
+            <a href="#purchases">In-App Purchases</a>
+            <a href="#thirdparty">Third-Party SDKs</a>
+            <a href="#storage">Storage &amp; Security</a>
+            <a href="#rights">Your Rights</a>
+            <a href="#permissions">Permissions</a>
+            <a href="#children">Children</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    <!-- ── 1. Introduction ───────────────────────────────────────── -->
+    <div class="section" id="intro">
+        <div class="section-head">
+            <div class="section-icon icon-blue">📖</div>
+            <div><h2>Introduction</h2><div class="section-num">Section 01</div></div>
+        </div>
+        <p>Welcome to <strong>Video Downloader - Video Saver</strong> (the "App"), package <code>com.jaystudio.all.video.downloader</code>, developed and operated by <strong>LogicGridApps</strong> ("we," "us," "our"), located in Gujarat, India. The App allows users to browse websites, search for videos, filter/block ads, and download media files directly to their local storage.</p>
+        <p>This Privacy Policy describes what information we collect, why we collect it, how we use it, and the choices you have. <strong>Please read it carefully before using the App.</strong></p>
+        <div class="callout callout-blue">
+            By downloading, installing, or using the App, you acknowledge that you have read and agree to this Privacy Policy. If you do not agree, please uninstall and do not use the App.
+        </div>
+        <p>This policy covers video detection, download requests, built-in browser features, ad-blocking functions, in-app purchases, Firebase services, and Google AdMob advertising.</p>
+    </div>
+    <!-- ── 2. Data We Collect ─────────────────────────────────────── -->
+    <div class="section" id="collect">
+        <div class="section-head">
+            <div class="section-icon icon-teal">📊</div>
+            <div><h2>Information We Collect</h2><div class="section-num">Section 02</div></div>
+        </div>
+        <p>We collect information in three ways: data you provide manually, data generated automatically from your device, and data collected by third-party SDKs we integrate (detailed in Section 8).</p>
+        <h3 style="color:var(--accent);margin:18px 0 8px;font-size:1rem;">2.1 Data You Provide</h3>
+        <ul>
+            <li><strong>Video URLs</strong> — links you paste or browse to analyze and download</li>
+            <li><strong>Search queries</strong> — search terms entered in the built-in browser</li>
+            <li><strong>Custom configurations</strong> — custom ad block list URLs and file renaming strings</li>
+        </ul>
+        <h3 style="color:var(--accent);margin:18px 0 8px;font-size:1rem;">2.2 Automatically Collected Data</h3>
+        <p>The following are collected automatically when you use certain features:</p>
+        <ul>
+            <li><strong>App settings</strong> — chosen language locale, default video resolution, and adblock configurations stored locally</li>
+            <li><strong>Download and browser history</strong> — bookmark lists, search suggestions, and download queues stored locally (SQLite Database)</li>
+            <li><strong>Purchase information</strong> — billing receipts processed securely via Google Play Billing</li>
+            <li><strong>Advertising identifiers</strong> — collected by Google AdMob when ads are shown — see Section 5</li>
+            <li><strong>App usage events</strong> — collected by Firebase Analytics — see Section 6</li>
+            <li><strong>Device information</strong> — model, OS version, language — collected by Firebase and AdMob</li>
+        </ul>
+        <h3 style="color:var(--accent);margin:18px 0 8px;font-size:1rem;">2.3 Data NOT Collected by Us</h3>
+        <div class="callout callout-green">
+            <strong>LogicGridApps does not require</strong> your name, email, phone number, or social sign-in credentials for core App use. We do not transmit your downloaded video files to external servers. All downloads are saved directly on your local device.
+        </div>
+    </div>
+    <!-- ── 3. Access ─────────────────────────────────────────────── -->
+    <div class="section" id="access">
+        <div class="section-head">
+            <div class="section-icon icon-purple">🌐</div>
+            <div><h2>Network &amp; Storage Access</h2><div class="section-num">Section 03</div></div>
+        </div>
+        <div class="callout callout-amber">
+            <strong>Storage access disclosure:</strong> This App needs access to your local storage to save downloaded video/audio files and display them in the "Downloaded" section. We only read and write files inside the user's specific storage paths.
+        </div>
+        <h3 style="color:var(--accent);margin:18px 0 8px;font-size:1rem;">What We Access</h3>
+        <div class="pill-list">
+            <span class="pill pill-green">Local storage (Download folder)</span>
+            <span class="pill pill-green">Internet connections (Web browser)</span>
+            <span class="pill pill-blue">Private vault files</span>
+        </div>
+        <h3 style="color:var(--accent);margin:18px 0 8px;font-size:1rem;">How This Access is Used</h3>
+        <ul>
+            <li>Internet permission is used to load web pages, analyze streaming links, and perform the download</li>
+            <li>Storage permissions are used to write the downloaded files and display existing local files inside the gallery</li>
+        </ul>
+        <p>Revoke permissions anytime: <strong>Settings → Apps → Video Downloader → Permissions</strong>.</p>
+    </div>
+    <!-- ── 4. Downloader Engine ──────────────────────────────────── -->
+    <div class="section" id="processing">
+        <div class="section-head">
+            <div class="section-icon icon-green">⚙️</div>
+            <div><h2>Video Downloader Engine</h2><div class="section-num">Section 04</div></div>
+        </div>
+        <p>When you browse or request a download, our built-in engines (such as the Custom Downloader or Youtube-dl wrapper) process the streaming URLs locally or using transient network connections.</p>
+        <div class="callout callout-green">
+            <strong>Key facts:</strong> All downloads are executed directly on your device. We do not cache, inspect, or log your media downloads on private servers.
+        </div>
+    </div>
+    <!-- ── 5. Ads ──────────────────────────────────────────────────── -->
+    <div class="section" id="ads">
+        <div class="section-head">
+            <div class="section-icon icon-amber">📢</div>
+            <div><h2>Advertising — Google AdMob</h2><div class="section-num">Section 05</div></div>
+        </div>
+        <div class="callout callout-amber">
+            <strong>AdMob Disclosure:</strong> This App uses Google AdMob to display advertisements. AdMob may collect and use data from your device to serve personalized or non-personalized ads. This section explains how advertising works in the App.
+        </div>
+        <h3 style="color:var(--accent);margin:18px 0 8px;font-size:1rem;">Ad Formats Used</h3>
+        <div class="ad-types">
+            <div class="ad-type-card">
+                <strong>⚡ Native / Banner Ads</strong>
+                <span>Embedded visual banners shown during search, browser configuration, or downloaded video list screens.</span>
+            </div>
+            <div class="ad-type-card">
+                <strong>🎬 Rewarded / Interstitial Ads</strong>
+                <span>Full-screen visual ads presented during specific download transitions. Ad frequency can be controlled dynamically via Firebase Remote Config.</span>
+            </div>
+        </div>
+        <h3 style="color:var(--accent);margin:18px 0 8px;font-size:1rem;">Data Collected by AdMob</h3>
+        <p>Google AdMob independently collects the following data for ad serving and measurement purposes:</p>
+        <ul>
+            <li>Advertising identifier (Google Advertising ID / GAID)</li>
+            <li>Device information (model, OS version, screen size, language)</li>
+            <li>IP address (used to infer approximate geographic location)</li>
+            <li>App interaction signals (ad impressions, clicks)</li>
+        </ul>
+        <p>This data is collected and processed by Google LLC under their own privacy policy. LogicGridApps does not have access to or control over AdMob's data collection.</p>
+        <h3 style="color:var(--accent);margin:18px 0 8px;font-size:1rem;">Ad Personalization</h3>
+        <p>By default, AdMob may serve <strong>personalized ads</strong>. You can opt out of personalized ads at any time:</p>
+        <ul>
+            <li>On your Android device: <strong>Settings → Google → Ads → Opt out of Ads Personalization</strong></li>
+            <li>Or reset your Advertising ID: <strong>Settings → Google → Ads → Reset Advertising ID</strong></li>
+        </ul>
+        <div class="divider"></div>
+        <p>For Google's data practices related to advertising, see: <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a> and <a href="https://support.google.com/admob/answer/6128543" target="_blank">AdMob Privacy FAQ</a>.</p>
+    </div>
+    <!-- ── 6. Analytics ───────────────────────────────────────────── -->
+    <div class="section" id="analytics">
+        <div class="section-head">
+            <div class="section-icon icon-blue">📈</div>
+            <div><h2>Analytics &amp; Remote Configuration</h2><div class="section-num">Section 06</div></div>
+        </div>
+        <h3 style="color:var(--accent);margin:18px 0 8px;font-size:1rem;">Firebase Analytics</h3>
+        <p>We use <strong>Google Firebase Analytics</strong> to understand how users interact with the App. This helps us improve features and fix issues. Firebase Analytics automatically collects:</p>
+        <ul>
+            <li>Screen views and navigation events</li>
+            <li>App open/close and session duration</li>
+            <li>Device type, OS version, app version, language</li>
+            <li>Crash and error reports (Firebase Crashlytics)</li>
+        </ul>
+        <p><strong>No personally identifiable data</strong> (such as your search queries or vault files) is ever sent to Firebase Analytics.</p>
+        <h3 style="color:var(--accent);margin:18px 0 8px;font-size:1rem;">Firebase Remote Config</h3>
+        <p>We use Firebase Remote Config to dynamically control app behavior without requiring an update — including ad frequency limits, feature flags, and UI layout controls. No personal data is transmitted to Remote Config.</p>
+    </div>
+    <!-- ── 7. Purchases ───────────────────────────────────────────── -->
+    <div class="section" id="purchases">
+        <div class="section-head">
+            <div class="section-icon icon-green">💳</div>
+            <div><h2>In-App Purchases &amp; Billing</h2><div class="section-num">Section 07</div></div>
+        </div>
+        <p>The App offers an ad-free premium purchase. Transactions are processed via <strong>Google Play Billing</strong>.</p>
+        <ul>
+            <li>Purchases and entitlements are verified directly with Google APIs</li>
+            <li>No credit card, banking, or personal identity information is received or stored by LogicGridApps</li>
+        </ul>
+    </div>
+    <!-- ── 8. Third-Party SDKs ─────────────────────────────────────── -->
+    <div class="section" id="thirdparty">
+        <div class="section-head">
+            <div class="section-icon icon-slate">🔗</div>
+            <div><h2>Third-Party SDKs &amp; Services</h2><div class="section-num">Section 08</div></div>
+        </div>
+        <p>The App integrates the following third-party SDKs and services. Each operates under its own privacy policy and data practices.</p>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>SDK / Service</th>
+                        <th>Provider</th>
+                        <th>Purpose</th>
+                        <th>Data Sent?</th>
+                        <th>Privacy Policy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Google Play Billing</strong></td><td>Google LLC</td><td>In-app purchases</td><td><span class="tick">✔ Purchase token</span></td><td><a href="https://policies.google.com/privacy" target="_blank">Google</a></td></tr>
+                    <tr><td><strong>Firebase Analytics</strong></td><td>Google LLC</td><td>Analytics</td><td><span class="tick">✔ App events</span></td><td><a href="https://policies.google.com/privacy" target="_blank">Google</a></td></tr>
+                    <tr><td><strong>Firebase Remote Config</strong></td><td>Google LLC</td><td>Feature flags</td><td><span class="tick">✔ Config fetch</span></td><td><a href="https://policies.google.com/privacy" target="_blank">Google</a></td></tr>
+                    <tr><td><strong>Google AdMob</strong></td><td>Google LLC</td><td>Ads display</td><td><span class="tick">✔ Ad ID, device info</span></td><td><a href="https://policies.google.com/privacy" target="_blank">Google</a></td></tr>
+                    <tr><td><strong>ExoPlayer / Media3</strong></td><td>Android / Google</td><td>Video playback</td><td><span class="cross">✘ None</span></td><td><a href="https://policies.google.com/privacy" target="_blank">Google</a></td></tr>
+                    <tr><td><strong>MMKV</strong></td><td>Tencent</td><td>Local preferences</td><td><span class="cross">✘ No local data sent</span></td><td>—</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- ── 9. Storage & Security ──────────────────────────────────── -->
+    <div class="section" id="storage">
+        <div class="section-head">
+            <div class="section-icon icon-green">🔒</div>
+            <div><h2>Data Storage &amp; Security</h2><div class="section-num">Section 09</div></div>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Data Type</th><th>Where Stored</th><th>Sent to Servers?</th><th>Retention</th></tr></thead>
+                <tbody>
+                    <tr><td>Downloaded files</td><td>Device folder (Public/Private)</td><td><span class="cross">✘ Local only</span></td><td>Until you delete it</td></tr>
+                    <tr><td>History &amp; Bookmarks</td><td>Local SQLite Database</td><td><span class="cross">✘ Local only</span></td><td>Until deleted/cleared</td></tr>
+                    <tr><td>Tracking configuration</td><td>MMKV Key Storage</td><td><span class="cross">✘ Local only</span></td><td>Until uninstall</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 style="color:var(--accent);margin:18px 0 8px;font-size:1rem;">Our Security Measures</h3>
+        <ul>
+            <li>Private files are placed in an encrypted folder structure (Vault) on the device filesystem</li>
+            <li>All download request flows utilize HTTPS/TLS data encryption in transit</li>
+            <li>No data leaves the device except through your own web browser operations</li>
+        </ul>
+    </div>
+    <!-- ── 10. Your Rights ─────────────────────────────────────────── -->
+    <div class="section" id="rights">
+        <div class="section-head">
+            <div class="section-icon icon-blue">⚖️</div>
+            <div><h2>Your Rights &amp; Controls</h2><div class="section-num">Section 10</div></div>
+        </div>
+        <p>You have full control over your data:</p>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Right</th><th>How to Exercise It</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Access history</strong></td><td>Open the History/Bookmarks settings in the App</td></tr>
+                    <tr><td><strong>Delete downloaded files</strong></td><td>Delete via the "Downloaded" section in the App or using your system File Manager</td></tr>
+                    <tr><td><strong>Clear browsing history</strong></td><td>Clear search query cache in the browser settings</td></tr>
+                    <tr><td><strong>Revoke storage permissions</strong></td><td>Android Settings → Apps → Video Downloader → Permissions → Storage</td></tr>
+                    <tr><td><strong>Opt out of personalized ads</strong></td><td>Android Settings → Google → Ads → Opt out of Ads Personalization</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>For inquiries, contact us at the email address below.</p>
+    </div>
+    <!-- ── 11. Permissions ─────────────────────────────────────────── -->
+    <div class="section" id="permissions">
+        <div class="section-head">
+            <div class="section-icon icon-purple">🔑</div>
+            <div><h2>Permissions Summary</h2><div class="section-num">Section 11</div></div>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Permission</th><th>Purpose</th><th>Optional?</th><th>Data Leaves Device?</th></tr></thead>
+                <tbody>
+                    <tr><td><code>READ_EXTERNAL_STORAGE</code> / <code>WRITE_EXTERNAL_STORAGE</code> / <code>READ_MEDIA_VIDEO</code></td><td>Save and load media downloads</td><td>Required for download flow</td><td><span class="cross">✘ Never</span></td></tr>
+                    <tr><td><code>INTERNET</code></td><td>Connect to websites and fetch data</td><td>Required</td><td><span class="tick">✔ Web requests only</span></td></tr>
+                    <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Check connections</td><td>—</td><td><span class="cross">✘ Never</span></td></tr>
+                    <tr><td><code>AD_ID</code></td><td>AdMob (when ads on)</td><td>When ads shown</td><td><span class="tick">✔ To Google</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- ── 12. Children ───────────────────────────────────────────── -->
+    <div class="section" id="children">
+        <div class="section-head">
+            <div class="section-icon icon-red">👶</div>
+            <div><h2>Children's Privacy</h2><div class="section-num">Section 12</div></div>
+        </div>
+        <p>This App is intended for users aged <strong>13 and above</strong>. The App is not directed at, and we do not knowingly collect personal information from, children under 13.</p>
+        <p>If you are a parent or guardian and believe your child under 13 has used this App, please contact us immediately at <a href="mailto:logicgridapps@gmail.com">logicgridapps@gmail.com</a> and we will take steps to address it.</p>
+    </div>
+    <!-- ── 13. Policy Changes ──────────────────────────────────────── -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-icon icon-slate">🔄</div>
+            <div><h2>Changes to This Policy</h2><div class="section-num">Section 13</div></div>
+        </div>
+        <p>We may update this Privacy Policy when we add features, integrate new SDKs, or when applicable laws change. We will notify you of material changes by updating the "Last Updated" date at the top of this page.</p>
+        <p>Continued use of the App after the effective date of an updated policy constitutes your acceptance of the changes.</p>
+    </div>
+    <!-- ── 14. Contact ────────────────────────────────────────────── -->
+    <div class="section" id="contact">
+        <div class="section-head">
+            <div class="section-icon icon-blue">✉️</div>
+            <div><h2>Contact Us</h2><div class="section-num">Section 14</div></div>
+        </div>
+        <p>For privacy-related questions, permission concerns, or any other inquiries:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:logicgridapps@gmail.com">logicgridapps@gmail.com</a></li>
+            <li><strong>Developer:</strong> Mukesh Thummar</li>
+            <li><strong>Company:</strong> LogicGridApps</li>
+            <li><strong>Location:</strong> Gujarat, India</li>
+        </ul>
+        <div class="callout callout-blue">
+            We aim to respond to all privacy-related inquiries within <strong>30 business days</strong>.
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <strong>Video Downloader - Video Saver</strong><br>
+    © 2026 LogicGridApps · Mukesh Thummar · Gujarat, India<br>
+    <a href="mailto:logicgridapps@gmail.com">logicgridapps@gmail.com</a>
+</footer>
+</body>
+</html>
