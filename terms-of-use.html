@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use — Video Downloader - Video Saver</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy:   #0F1D3B;
+            --blue:   #1E3A8A;
+            --accent: #2563EB;
+            --sky:    #3B82F6;
+            --teal:   #0EA5E9;
+            --green:  #059669;
+            --red:    #DC2626;
+            --amber:  #D97706;
+            --ink:    #1E293B;
+            --body:   #334155;
+            --muted:  #64748B;
+            --border: #CBD5E1;
+            --surface:#F1F5F9;
+            --white:  #FFFFFF;
+            --card-shadow: 0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(30,58,138,.08);
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
+            color: var(--body);
+            background: #EEF2FF;
+            min-height: 100vh;
+        }
+        .site-header {
+            background: linear-gradient(135deg, #0B1628 0%, #1E3A8A 55%, #1D4ED8 100%);
+            color: #fff;
+            padding: 56px 24px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .site-header::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 30% 40%, rgba(99,102,241,.2) 0%, transparent 55%),
+                        radial-gradient(ellipse at 80% 70%, rgba(14,165,233,.15) 0%, transparent 55%);
+            pointer-events: none;
+        }
+        .header-icon { font-size: 52px; display: block; margin-bottom: 16px; filter: drop-shadow(0 4px 12px rgba(0,0,0,.25)); }
+        .site-header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 400;
+            letter-spacing: -.5px;
+            margin-bottom: 6px;
+        }
+        .site-header .doc-type { font-size: .9rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; opacity: .75; margin-bottom: 20px; }
+        .badge-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
+        .badge { background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25); border-radius: 20px; padding: 4px 14px; font-size: .78rem; font-weight: 500; backdrop-filter: blur(4px); }
+        .page-wrap { max-width: 860px; margin: 0 auto; padding: 0 20px 60px; }
+        .toc-strip {
+            background: var(--white); border-radius: 14px; box-shadow: var(--card-shadow);
+            padding: 20px 24px; margin: -28px 0 32px; position: relative; z-index: 2;
+        }
+        .toc-strip p { font-size: .78rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+        .toc-links { display: flex; flex-wrap: wrap; gap: 6px; }
+        .toc-links a { font-size: .82rem; color: var(--accent); text-decoration: none; background: var(--surface); border-radius: 6px; padding: 4px 10px; font-weight: 500; transition: background .15s, color .15s; }
+        .toc-links a:hover { background: var(--accent); color: #fff; }
+        .section { background: var(--white); border-radius: 16px; box-shadow: var(--card-shadow); padding: 32px; margin-bottom: 24px; scroll-margin-top: 24px; }
+        .section-head { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1.5px solid var(--surface); }
+        .section-icon { width: 42px; height: 42px; border-radius: 11px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+        .icon-blue   { background: #DBEAFE; }
+        .icon-green  { background: #D1FAE5; }
+        .icon-red    { background: #FEE2E2; }
+        .icon-amber  { background: #FEF3C7; }
+        .icon-purple { background: #EDE9FE; }
+        .icon-teal   { background: #CFFAFE; }
+        .icon-slate  { background: #F1F5F9; }
+        .icon-indigo { background: #E0E7FF; }
+        h2 { font-family: 'DM Serif Display', serif; font-size: 1.3rem; font-weight: 400; color: var(--ink); letter-spacing: -.3px; }
+        h3 { color: var(--accent); margin: 18px 0 8px; font-size: 1rem; font-weight: 600; }
+        .section-num { font-size: .72rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-top: 1px; }
+        p { line-height: 1.75; margin-bottom: 14px; font-size: .97rem; }
+        p:last-child { margin-bottom: 0; }
+        ul, ol { padding-left: 20px; margin-bottom: 14px; }
+        li { line-height: 1.75; font-size: .97rem; margin-bottom: 4px; }
+        strong { font-weight: 600; color: var(--ink); }
+        code { font-family: 'SF Mono', 'Fira Code', monospace; background: var(--surface); border-radius: 4px; padding: 1px 6px; font-size: .85em; color: var(--accent); border: 1px solid var(--border); }
+        a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+        .callout { border-radius: 10px; padding: 14px 18px; margin: 16px 0; font-size: .93rem; line-height: 1.65; }
+        .callout-blue   { background: #EFF6FF; border-left: 3px solid var(--accent); color: #1E40AF; }
+        .callout-green  { background: #ECFDF5; border-left: 3px solid var(--green);  color: #065F46; }
+        .callout-red    { background: #FFF1F2; border-left: 3px solid var(--red);    color: #9B1C1C; }
+        .callout-amber  { background: #FFFBEB; border-left: 3px solid var(--amber);  color: #92400E; }
+        .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; border: 1px solid var(--border); }
+        table { width: 100%; border-collapse: collapse; font-size: .9rem; min-width: 420px; }
+        thead tr { background: var(--surface); }
+        th { text-align: left; padding: 11px 14px; font-weight: 600; color: var(--ink); font-size: .82rem; text-transform: uppercase; letter-spacing: .5px; border-bottom: 1px solid var(--border); }
+        td { padding: 10px 14px; border-bottom: 1px solid var(--surface); vertical-align: top; line-height: 1.6; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background: #FAFBFF; }
+        .divider { height: 1px; background: var(--surface); margin: 20px 0; }
+        .footer { background: var(--navy); color: rgba(255,255,255,.65); text-align: center; padding: 28px 20px; font-size: .85rem; line-height: 1.8; }
+        .footer a { color: rgba(255,255,255,.85); }
+        .footer strong { color: #fff; }
+        @media (max-width: 600px) {
+            .section { padding: 20px 18px; }
+            .site-header { padding: 40px 20px 36px; }
+        }
+    </style>
+</head>
+<body>
+<!-- ── Header ─────────────────────────────────────────────────── -->
+<header class="site-header">
+    <span class="header-icon">📥</span>
+    <h1>Video Downloader - Video Saver</h1>
+    <div class="doc-type">Terms of Use</div>
+    <div class="badge-row">
+        <span class="badge">📅 Last Updated: June 29, 2026</span>
+        <span class="badge">⚖️ Governed by Indian Law</span>
+        <span class="badge">✅ Google Play Developer Policy Compliant</span>
+        <span class="badge">📱 AdMob Policy Compliant</span>
+    </div>
+</header>
+<div class="page-wrap">
+    <!-- ── TOC ──────────────────────────────────────────────────── -->
+    <div class="toc-strip">
+        <p>Quick Navigation</p>
+        <div class="toc-links">
+            <a href="#acceptance">Acceptance</a>
+            <a href="#license">License</a>
+            <a href="#permitted">Permitted Use</a>
+            <a href="#prohibited">Prohibited Use</a>
+            <a href="#ads-terms">Advertising</a>
+            <a href="#purchases-terms">In-App Purchases</a>
+            <a href="#copyright">Copyright &amp; Content Ownership</a>
+            <a href="#disclaimer">General Disclaimer</a>
+            <a href="#ip">Intellectual Property</a>
+            <a href="#termination">Termination</a>
+            <a href="#liability">Limitation of Liability</a>
+            <a href="#governing">Governing Law</a>
+            <a href="#changes">Changes</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    <!-- ── 1. Acceptance ─────────────────────────────────────────── -->
+    <div class="section" id="acceptance">
+        <div class="section-head">
+            <div class="section-icon icon-blue">✅</div>
+            <div><h2>Acceptance of Terms</h2><div class="section-num">Section 01</div></div>
+        </div>
+        <p>These Terms of Use ("Terms") constitute a legally binding agreement between you ("User") and <strong>LogicGridApps</strong>, operated by <strong>Mukesh Thummar</strong>, Gujarat, India ("we," "us," "our"), governing your use of <strong>Video Downloader - Video Saver</strong> (the "App").</p>
+        <div class="callout callout-blue">
+            <strong>By downloading, installing, or using the App, you confirm that you:</strong><br>
+            (a) have read and understood these Terms;<br>
+            (b) are at least 13 years old (or of legal age in your jurisdiction);<br>
+            (c) agree to be bound by these Terms and our Privacy Policy.<br><br>
+            If you do not agree to these Terms, you must immediately uninstall the App and cease using it.
+        </div>
+        <p>These Terms apply to all versions of the App, including all updates, upgrades, and new features released under the same App listing on the Google Play Store.</p>
+    </div>
+    <!-- ── 2. License ────────────────────────────────────────────── -->
+    <div class="section" id="license">
+        <div class="section-head">
+            <div class="section-icon icon-indigo">📜</div>
+            <div><h2>Limited License</h2><div class="section-num">Section 02</div></div>
+        </div>
+        <p>We grant you a personal, revocable, non-transferable, non-exclusive, and limited license to download, install, and run the App on your mobile device for your personal, non-commercial purposes only.</p>
+        <p>This license does not allow you to copy, modify, distribute, sell, lease, reverse engineer, or extract the source code of the App or any of its internal libraries.</p>
+    </div>
+    <!-- ── 3. Permitted Use ──────────────────────────────────────── -->
+    <div class="section" id="permitted">
+        <div class="section-head">
+            <div class="section-icon icon-green">👍</div>
+            <div><h2>Permitted Use</h2><div class="section-num">Section 03</div></div>
+        </div>
+        <p>You agree to use the App only in accordance with:</p>
+        <ul>
+            <li>These Terms</li>
+            <li>Google Play Store Terms of Service</li>
+            <li>All applicable local, state, national, and international laws, regulations, and copyright rules</li>
+        </ul>
+        <p>You are solely responsible for all content, streaming pages, or video URLs that you choose to input, browse, or download using the built-in browser engine.</p>
+    </div>
+    <!-- ── 4. Prohibited Use ─────────────────────────────────────── -->
+    <div class="section" id="prohibited">
+        <div class="section-head">
+            <div class="section-icon icon-red">🚫</div>
+            <div><h2>Prohibited Use</h2><div class="section-num">Section 04</div></div>
+        </div>
+        <p>You must NOT use the App to:</p>
+        <ul>
+            <li>Download, distribute, or stream copyrighted material without the express consent of the copyright owner</li>
+            <li>Violate the terms of service of third-party platforms (such as YouTube, Facebook, or Instagram)</li>
+            <li>Access or download unlawful, harmful, threatening, abusive, defamatory, or obscene materials</li>
+            <li>Infect the system with malware, viruses, or use bots to automatedly crawl links</li>
+            <li>Bypass or attempt to bypass security measures or ad-blocking restrictions configured in the system</li>
+        </ul>
+    </div>
+    <!-- ── 5. Advertising ────────────────────────────────────────── -->
+    <div class="section" id="ads-terms">
+        <div class="section-head">
+            <div class="section-icon icon-amber">📢</div>
+            <div><h2>Advertising</h2><div class="section-num">Section 05</div></div>
+        </div>
+        <p>The App displays advertisements powered by Google AdMob. Ads are required to support the ongoing development of the App. By using the App, you consent to the display of banners, native slots, interstitials, and rewarded videos as configured.</p>
+        <p>We do not endorse and are not responsible for the content, accuracy, or products advertised in third-party ad creatives shown inside the App.</p>
+    </div>
+    <!-- ── 6. In-App Purchases ────────────────────────────────────── -->
+    <div class="section" id="purchases-terms">
+        <div class="section-head">
+            <div class="section-icon icon-green">💳</div>
+            <div><h2>In-App Purchases &amp; Billing</h2><div class="section-num">Section 06</div></div>
+        </div>
+        <p>You can purchase an ad-free premium version via Google Play Billing. Transactions are subject to Google Play billing terms and conditions.</p>
+        <ul>
+            <li>All purchases are final. Refunds are subject to the Google Play Store refund policy.</li>
+            <li>Premium entitlements are linked to your Google Account. You can restore purchases on any supported device.</li>
+        </ul>
+    </div>
+    <!-- ── 7. Copyright & Content Ownership ──────────────────────── -->
+    <div class="section" id="copyright">
+        <div class="section-head">
+            <div class="section-icon icon-purple">⚖️</div>
+            <div><h2>Copyright &amp; Content Ownership</h2><div class="section-num">Section 07</div></div>
+        </div>
+        <div class="callout callout-red">
+            <strong>CRITICAL WARNING:</strong> We do not host, check, or monitor any third-party streaming media content. It is your sole responsibility to check the intellectual property rights of any video before downloading it. Downloading copyrighted videos without permission is illegal and a violation of these Terms.
+        </div>
+        <p>LogicGridApps respects intellectual property rights. If you believe your copyrighted material is being accessed or downloaded in violation of laws, please contact the hosting platform where the file is stored, as this App only functions as a local downloader tool.</p>
+    </div>
+    <!-- ── 8. General Disclaimer ─────────────────────────────────── -->
+    <div class="section" id="disclaimer">
+        <div class="section-head">
+            <div class="section-icon icon-slate">⚠️</div>
+            <div><h2>Disclaimer of Warranties</h2><div class="section-num">Section 08</div></div>
+        </div>
+        <p>The App is provided <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> without warranties of any kind, either express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, non-infringement, or availability.</p>
+        <p>We do not warrant that the App will always successfully parse or download video links, as third-party platform formats and security measures change frequently.</p>
+    </div>
+    <!-- ── 9. Intellectual Property ─────────────────────────────── -->
+    <div class="section" id="ip">
+        <div class="section-head">
+            <div class="section-icon icon-blue">💡</div>
+            <div><h2>Intellectual Property</h2><div class="section-num">Section 09</div></div>
+        </div>
+        <p>All logos, code, assets, UI layouts, and graphics of the App are the exclusive intellectual property of LogicGridApps and Mukesh Thummar. You receive no ownership rights by using the App.</p>
+    </div>
+    <!-- ── 10. Termination ───────────────────────────────────────── -->
+    <div class="section" id="termination">
+        <div class="section-head">
+            <div class="section-icon icon-red">🛑</div>
+            <div><h2>Termination</h2><div class="section-num">Section 10</div></div>
+        </div>
+        <p>We reserve the right, without notice and at our sole discretion, to terminate your license to use the App, or block your access to specific browser/adblock configurations, for any violation of these Terms.</p>
+    </div>
+    <!-- ── 11. Limitation of Liability ───────────────────────────── -->
+    <div class="section" id="liability">
+        <div class="section-head">
+            <div class="section-icon icon-purple">💥</div>
+            <div><h2>Limitation of Liability</h2><div class="section-num">Section 11</div></div>
+        </div>
+        <p>To the maximum extent permitted by applicable law, LogicGridApps and Mukesh Thummar shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of your use, misuse, or inability to use the App, or any data loss, even if advised of the possibility of such damages.</p>
+    </div>
+    <!-- ── 12. Governing Law ─────────────────────────────────────── -->
+    <div class="section" id="governing">
+        <div class="section-head">
+            <div class="section-icon icon-teal">⚖️</div>
+            <div><h2>Governing Law &amp; Jurisdiction</h2><div class="section-num">Section 12</div></div>
+        </div>
+        <p>These Terms shall be governed by and construed in accordance with the laws of <strong>India</strong>, without regard to its conflicts of law principles.</p>
+        <p>Any disputes arising under or in connection with these Terms shall be subject to the exclusive jurisdiction of the courts located in <strong>Gujarat, India</strong>.</p>
+    </div>
+    <!-- ── 13. Changes ───────────────────────────────────────────── -->
+    <div class="section" id="changes">
+        <div class="section-head">
+            <div class="section-icon icon-slate">🔄</div>
+            <div><h2>Changes to These Terms</h2><div class="section-num">Section 13</div></div>
+        </div>
+        <p>We may modify these Terms at any time. When we make updates, we will revise the "Last Updated" date at the top. Your continued use of the App after modifications constitutes your binding acceptance of the updated Terms.</p>
+    </div>
+    <!-- ── 14. Contact ───────────────────────────────────────────── -->
+    <div class="section" id="contact">
+        <div class="section-head">
+            <div class="section-icon icon-blue">✉️</div>
+            <div><h2>Contact Us</h2><div class="section-num">Section 14</div></div>
+        </div>
+        <p>For questions or support regarding these Terms of Use:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:logicgridapps@gmail.com">logicgridapps@gmail.com</a></li>
+            <li><strong>Developer:</strong> Mukesh Thummar</li>
+            <li><strong>Company:</strong> LogicGridApps</li>
+            <li><strong>Location:</strong> Gujarat, India</li>
+        </ul>
+    </div>
+</div>
+<footer class="footer">
+    <strong>Video Downloader - Video Saver</strong><br>
+    © 2026 LogicGridApps · Mukesh Thummar · Gujarat, India<br>
+    <a href="mailto:logicgridapps@gmail.com">logicgridapps@gmail.com</a>
+</footer>
+</body>
+</html>
